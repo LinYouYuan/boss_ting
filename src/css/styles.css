@@ -1,0 +1,40 @@
+body {
+  width: 300px;
+  min-height: 100px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.btn-common {
+  color: #fff;
+  height: 32px;
+  line-height: 32px;
+  background-color: #1890ff;
+  padding: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-common:hover {
+  background-color: #40a9ff;
+}
+
+.btn-common:active {
+  background-color: #096dd9;
+}
+
+.btn-common:focus {
+  background-color: #40a9ff;
+}
+
+.data-number {
+  margin-left: 10px;
+}
+
+.li-container {
+  margin: 5px;
+}
