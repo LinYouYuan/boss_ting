@@ -1,5 +1,3 @@
-const { config } = chrome.extension.getBackgroundPage()
-
 function sendMessageToContentScript(message, callback) {
   chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
     chrome.tabs.sendMessage(tabs[0].id, message, response => {
@@ -9,11 +7,12 @@ function sendMessageToContentScript(message, callback) {
 }
 
 function init() {
-  const btnPeople = document.getElementById('btn-people')
-  btnPeople.onclick = () => {
-    sendMessageToContentScript({ type: 'getPeople' }, response => {
-      const peopleNum = document.getElementById('data-number')
-      peopleNum.innerText(response)
+  const btnStart = document.getElementById('btn-start')
+  btnStart.onclick = () => {
+    sendMessageToContentScript({ type: 'start' }, response => {
+      const peopleNum = document.getElementById('desc')
+      console.log('response', response)
+      peopleNum.innerText = response
     })
   }
   // btnClose.onclick = () => {
